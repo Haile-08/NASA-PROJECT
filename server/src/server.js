@@ -5,11 +5,20 @@ const http = require("http");
 
 const app = require("./app");
 
+const { loadPlanetsData } = require("./models/planets.models");
+
 //COMMONLY react runs on port 3000 so the server needs to be differenet
 const PORT = process.env.PORT || 8000;
 
 const server = http.createServer(app);
 
-server.listen(PORT, () => {
-  console.log(`Listening on port ${PORT} ...`);
-});
+//load the csv data before the server.listen
+async function startServer() {
+  await loadPlanetsData();
+
+  server.listen(PORT, () => {
+    console.log(`Listening on port ${PORT} ...`);
+  });
+}
+
+startServer();
