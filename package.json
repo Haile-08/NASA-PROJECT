@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Haile-08/NASA-PROJECT/issues"
   },
-  "homepage": "https://github.com/Haile-08/NASA-PROJECT#readme"
+  "homepage": "https://github.com/Haile-08/NASA-PROJECT#readme",
+  "dependencies": {
+    "morgan": "^1.10.0"
+  }
 }
