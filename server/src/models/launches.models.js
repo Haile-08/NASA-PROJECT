@@ -33,6 +33,8 @@ async function getlatestflightnumber(){
   }
   return latestlaunch.flightNumber;
 }
+
+
 async function getAllLaunches() {
   return await launchesDatabase.find(
     {},
@@ -60,7 +62,7 @@ async function saveLaunch(launch){
     upsert:true
    })
 }
-function scheduleNewLaunch(){
+async function scheduleNewLaunch(){
   const newFlightNumber = await getlatestflightnumber() + 1
   const newLaunch = Object.assign(launch, {
     success: true,
