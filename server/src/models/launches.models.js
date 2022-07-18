@@ -57,7 +57,6 @@ async function saveLaunch(launch){
 
    await launchesDatabase.updateOne({
     flightNumber: launch.flightNumber,
-
    }, launch , {
     upsert:true
    })
