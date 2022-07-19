@@ -67,8 +67,8 @@ async function getAllPlanets() {
     {},
     {
       // to exlxude
-      _id: 0,
-      __v: 0,
+      "_id": 0,
+      "__v": 0,
     }
   );
 }
